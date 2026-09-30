@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple browser Tic-Tac-Toe game.">
+  <title>Tic-Tac-Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <p class="eyebrow">CLASSIC BOARD GAME</p>
+      <h1>Tic <span>Tac</span> Toe</h1>
+      <p id="status" class="status" aria-live="polite">X's turn</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card x-score"><span>Player X</span><strong id="x-score">0</strong></div>
+      <div class="score-card draws"><span>Draws</span><strong id="draw-score">0</strong></div>
+      <div class="score-card o-score"><span>Player O</span><strong id="o-score">0</strong></div>
+    </section>
+
+    <section id="board" class="board" aria-label="Tic-Tac-Toe board">
+      <button class="cell" data-index="0" aria-label="Top left"></button>
+      <button class="cell" data-index="1" aria-label="Top middle"></button>
+      <button class="cell" data-index="2" aria-label="Top right"></button>
+      <button class="cell" data-index="3" aria-label="Middle left"></button>
+      <button class="cell" data-index="4" aria-label="Center"></button>
+      <button class="cell" data-index="5" aria-label="Middle right"></button>
+      <button class="cell" data-index="6" aria-label="Bottom left"></button>
+      <button class="cell" data-index="7" aria-label="Bottom middle"></button>
+      <button class="cell" data-index="8" aria-label="Bottom right"></button>
+    </section>
+
+    <div class="controls">
+      <button id="new-round" class="button primary">New round</button>
+      <button id="reset-game" class="button secondary">Reset scores</button>
+    </div>
+    <p class="hint">First to place three marks in a row wins.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
